@@ -14,6 +14,7 @@ var View = Backbone.View = function(options) {
 	}
 
 	this.initialize.apply(this, arguments);
+	this._listener();
 };
 
 var viewOptions = ['route'];
@@ -21,6 +22,21 @@ var viewOptions = ['route'];
 _.extend(View.prototype, null, {
 
 	initialize: function(){},
+
+	// All views should overwrite render(). In this setup, render is called once the app is ready;
+	// req and res are passed in for handling http input / output.
+	render: function(req, res){
+		console.log('Error : backbone_node : render function was not defined');
+		res.send('Error: View not set.', 404);
+	},
+
+	_appready: function(app){
+		app.get(this.route, this.render);
+	},
+
+	_listener: function(){
+		global.on('ready:app', this._appready);
+	},
 
 	_configure: function(options) {
 		if (this.options) options = _.extend({}, this.options, options);
