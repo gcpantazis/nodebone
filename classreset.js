@@ -17,7 +17,7 @@ var View = Backbone.View = function(options) {
 	this._listener();
 };
 
-var viewOptions = ['route'];
+var viewOptions = ['action', 'route'];
 
 _.extend(View.prototype, null, {
 
@@ -31,7 +31,9 @@ _.extend(View.prototype, null, {
 	},
 
 	_appready: function(app){
-		app.get(this.route, this.render);
+		if ( this.action === 'GET' ) app.get(this.route, this.render);
+		if ( this.action === 'POST' ) app.post(this.route, this.render);
+		if ( this.action === 'PUT' ) app.put(this.route, this.render);
 	},
 
 	_listener: function(){
