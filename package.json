@@ -1,7 +1,7 @@
 {
   "name": "node-backbone",
   "description": "Experimental package to give (very very) basic Backbone structures to node projects",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "homepage": "https://github.com/gcpantazis/node-backbone",
   "author": {
     "name": "George Pantazis",
