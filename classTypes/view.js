@@ -29,14 +29,13 @@ exports.init = function(){
 			res.send('Error: View not set.', 404);
 		},
 
-		_appready: function(app){
-			if ( this.action === 'GET' ) app.get(this.route, this.render);
-			if ( this.action === 'POST' ) app.post(this.route, this.render);
-			if ( this.action === 'PUT' ) app.put(this.route, this.render);
-		},
-
 		_listener: function(){
-			global.on('ready:app', this._appready);
+
+			var view = this;
+
+			global.on('ready:app', function(){
+				global.trigger('ready:view', view);
+			});
 		},
 
 		_configure: function(options) {

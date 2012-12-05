@@ -5,13 +5,14 @@ Experimental package to give (very very) basic Backbone structures to node proje
 
 ##How to use
 
-* Install with: ```npm install node-backbone```.
+* Install with: ```npm install nodebackbone```.
 
 * For usage examples please refer to [this project](https://github.com/gcpantazis/node-backbone-boilerplate).
 
 
 ##Changelog
 
+* v0.1.4 Misc changes, experimenting with new class types.
 * v0.1.2 Add verbs for routes.
 * v0.1.1 More for initial release.
 * v0.1.0 Initial release.
