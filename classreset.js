@@ -41,3 +41,5 @@ var inherits = function(parent, protoProps, staticProps) {
 
 	return child;
 };
+
+module.exports = Backbone;
