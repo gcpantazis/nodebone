@@ -7,6 +7,7 @@ var classTypes = require('./classTypes');
 var Helper = new classTypes.Helper.init();
 var View = new classTypes.View.init();
 var Router = new classTypes.Router.init();
+var Socket = new classTypes.Socket.init();
 
 var extend = function (protoProps, classProps) {
 	var child = inherits(this, protoProps, classProps);
@@ -14,7 +15,7 @@ var extend = function (protoProps, classProps) {
 	return child;
 };
 
-View.extend = Router.extend = Helper.extend = extend;
+Socket.extend = View.extend = Router.extend = Helper.extend = extend;
 
 var ctor = function(){};
 
