@@ -12,7 +12,7 @@ Experimental package to give (very very) basic Backbone structures to node proje
 
 ##Changelog
 
-* v0.1.7 Socket proto class.
+* v0.1.8 Socket proto class.
 * v0.1.5 Decoupling from express.
 * v0.1.4 Misc changes, experimenting with new class types.
 * v0.1.2 Add verbs for routes.
